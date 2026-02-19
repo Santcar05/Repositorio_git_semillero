@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
 
             MainButton(
               text: "Ir a Pantalla 2",
-              onPressed: () => goTo(context, const Screen2()),
+              onPressed: () => goTo(context,  Screen2()),
             ),
             const SizedBox(height: 12),
 
