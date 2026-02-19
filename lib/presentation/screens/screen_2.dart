@@ -16,7 +16,7 @@ class _Screen2State extends State<Screen2> {
   List<String> palabraVisible = [];
 
   void seleccionarPalabra() {
-    List<String> palabras = ["hola", "buenos", "barcelona "];
+    List<String> palabras = ["hola", "buenos", "barcelona"];
     palabras.shuffle();
     palabraActual = palabras.first;
     palabraVisible = List.filled(palabraActual.length, "_");
