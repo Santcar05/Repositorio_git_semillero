@@ -8,14 +8,45 @@ class Screen3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Pantalla 3"), centerTitle: true),
-      body: Center(
+      appBar: AppBar(
+        title: const Text("Pantalla 3 - Juan"),
+        centerTitle: true,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const Icon(
+              Icons.star,
+              size: 80,
+              color: Colors.blue,
+            ),
+            const SizedBox(height: 20),
             const Text(
-              "Estás en la Pantalla 3",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              "Bienvenido a mi versión personalizada",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              "Aquí agregué un diseño diferente como parte del trabajo colaborativo.",
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Botón adicional presionado"),
+                  ),
+                );
+              },
+              child: const Text("Mostrar mensaje"),
             ),
             const SizedBox(height: 20),
             MainButton(
